@@ -1,11 +1,11 @@
-// Simple test to verify the environment
+// Fixed test.js for Exercise 3
 console.log("Running Unit Tests...");
 const testValue = 1 + 1;
 
 if (testValue === 2) {
   console.log("Unit Test Passed!");
-  process.exit(0);
+  // Removed process.exit(0)
 } else {
   console.error("Unit Test Failed!");
-  process.exit(1);
+  throw new Error("Test failed!"); // Use an Error instead of exit(1)
 }
